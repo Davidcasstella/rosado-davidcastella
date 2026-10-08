@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Explore — Sci-Fi Open World</title>
+  <meta name="description" content="Storytelling web: un mundo abierto sci-fi en tonos rosados y violetas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/img/s1-bg.webp" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <a href="#" class="logo" data-goto="0" aria-label="Inicio">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="#fff" />
+        <path d="M15 12h11v3h-7.6v3.5h6.8v3h-6.8V25H26v3H15z" fill="#5a0f8c" />
+      </svg>
+    </a>
+    <nav class="links" aria-label="Principal">
+      <a href="#" class="link1" data-goto="0">HOME</a>
+      <a href="#" class="link2" data-goto="1">ABOUT US</a>
+      <a href="#" class="link3" data-goto="2">SERVICES</a>
+      <a href="#" class="link4" data-goto="4">CHARACTERS</a>
+      <a href="#" class="btn-contact" data-goto="3">CONTACT</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== HUD fijo (subtítulo dinámico + scroll texts) ===== -->
+  <div class="hud" aria-hidden="false">
+    <div class="tagline">
+      <h2>Sci-Fi Open World <span id="dynamic-word">Game</span></h2>
+      <span class="line"></span>
+    </div>
+    <div class="scroll-text left"><h2>SCROLL</h2></div>
+    <div class="scroll-text right"><h2><span id="counter">01</span> / 05</h2></div>
+  </div>
+
+  <!-- ===== Fullpage ===== -->
+  <main class="fullpage">
+
+    <section class="section is-active" id="section1" data-word="Game" aria-label="Explore">
+      <div class="layer bg"><div class="depth" data-depth="8"><img class="kb" src="assets/img/s1-bg.webp" alt="" /></div></div>
+      <div class="layer planet"><div class="depth" data-depth="18"><img class="moon" src="assets/img/s1-planet.webp" alt="" /></div></div>
+      <div class="layer title"><div class="depth" data-depth="26"><h1>explore</h1></div></div>
+      <div class="layer fg"><div class="depth" data-depth="40"><img src="assets/img/s1-fg.webp" alt="Explorador frente a un planeta gigante" /></div></div>
+    </section>
+
+    <section class="section" id="section2" data-word="Journey" aria-label="Discover">
+      <div class="layer bg"><div class="depth" data-depth="8"><img class="kb" src="assets/img/s2-bg.webp" alt="" loading="lazy" /></div></div>
+      <div class="layer title"><div class="depth" data-depth="22"><h1>discover</h1></div></div>
+      <div class="layer fg fg--ridge"><div class="depth" data-depth="40"><img src="assets/img/s2-fg.webp" alt="Silueta sobre una colina al atardecer" loading="lazy" /></div></div>
+    </section>
+
+    <section class="section" id="section3" data-word="Odyssey" aria-label="Beyond">
+      <div class="layer bg"><div class="depth" data-depth="8"><img class="kb" src="assets/img/s3-bg.webp" alt="" loading="lazy" /></div></div>
+      <div class="layer title"><div class="depth" data-depth="22"><h1>beyond</h1></div></div>
+      <div class="layer fg fg--cover"><div class="depth" data-depth="40"><img src="assets/img/s3-fg.webp" alt="Viajero en lo alto de una roca" loading="lazy" /></div></div>
+    </section>
+
+    <section class="section" id="section4" data-word="Adventure" aria-label="Ascend">
+      <div class="layer bg"><div class="depth" data-depth="8"><img class="kb" src="assets/img/s4-bg.webp" alt="" loading="lazy" /></div></div>
+      <div class="layer title"><div class="depth" data-depth="22"><h1>ascend</h1></div></div>
+      <div class="layer fg fg--ridge"><div class="depth" data-depth="40"><img src="assets/img/s4-fg.webp" alt="Silueta frente a un mar de nubes" loading="lazy" /></div></div>
+      <div class="layer cta">
+        <p>Tu historia empieza aquí.</p>
+        <a href="#" class="btn-primary" data-goto="4">Elige tu personaje</a>
+      </div>
+    </section>
+
+    <!-- ===== Character slider (as-slider) ===== -->
+    <section class="section section--slider" id="section5" data-word="Legend" aria-label="Characters">
+      <div class="as-slider">
+        <div class="as-slider-background" aria-hidden="true"></div>
+
+        <div class="as-bar" role="tablist" aria-label="Personajes"></div>
+
+        <div class="as-left">
+          <div class="as-changing-widget as-changing-widget--small" data-key="kicker"></div>
+          <div class="as-changing-widget as-changing-widget--big" data-key="title"></div>
+        </div>
+
+        <div class="as-right">
+          <div class="as-changing-widget as-changing-widget--name" data-key="name"></div>
+          <div class="as-changing-widget as-changing-widget--desc" data-key="desc"></div>
+
+          <div class="as-side-slider">
+            <div class="as-track"></div>
+          </div>
+
+          <div class="as-controls">
+            <button class="as-slider-left" aria-label="Anterior">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>
+            </button>
+            <button class="as-slider-right" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg>
+            </button>
+            <p class="as-hint">Desliza para elegir tu héroe</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
